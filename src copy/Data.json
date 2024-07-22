@@ -1,0 +1,293 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Food",
+        "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/foodtypes/1.png",
+        "subcategories": [
+          {
+            "id": 101,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/9.png",
+            "name": "SOUP",
+            "items": [
+              {
+                "id": 1001,
+                "name": "TOMATO BASIL SOUP",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/13.png",
+                "price": 399.0
+              },
+              {
+                "id": 1002,
+                "name": "MANCHOW SOUP",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/18.png",
+                "price": 349.0
+              },
+              {
+                "id": 1003,
+                "name": "LEMON CORIENDE SOUP",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/17.png",
+                "price": 349.0
+              },
+              {
+                "id": 1004,
+                "name": "CHICKEN MANCHOW SOUP",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/20.png",
+                "price": 399.0
+              },
+              {
+                "id": 1005,
+                "name": "CHICKEN LEMON COIENDER SOUP",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/25.png",
+                "price": 399.0
+              }
+            ]
+          },
+          {
+            "id": 102,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/10.png",
+            "name": "APPTILIZER",
+            "items": [
+              {
+                "id": 1006,
+                "name": "CHEESY VOL-AU-VENT",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/10.png",
+                "price": 449.0
+              },
+              {
+                "id": 1007,
+                "name": "VEG BULLETS",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/261.png",
+                "price": 449.0
+              },
+              {
+                "id": 1008,
+                "name": "BROCOLI CORN CRUKETS",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/260.png",
+                "price": 449.0
+              },
+              {
+                "id": 1009,
+                "name": "CRISPY PAPADI PANEER",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/16.png",
+                "price": 449.0
+              },
+              {
+                "id": 10010,
+                "name": "FRENCH FRIES SALTED",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/23.png",
+                "price": 349.0
+              }
+            ]
+          },
+          {
+            "id": 103,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/12.png",
+            "name": "MAIN COURSE",
+            "items": [
+              {
+                "id": 10011,
+                "name": "DAL TADKAT",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/12.png",
+                "price": 349.0
+              },
+              {
+                "id": 10012,
+                "name": "PANEER BUTTERMASALA",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/15.png",
+                "price": 449.0
+              },
+              {
+                "id": 10013,
+                "name": "DAL MAKHANI",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/310.png",
+                "price": 449.0
+              },
+              {
+                "id": 10014,
+                "name": "PANEER KADAI",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/311.png",
+                "price": 449.0
+              },
+              {
+                "id": 10015,
+                "name": "VEG KOHLAPURI",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/19.png",
+                "price": 449.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Desserts",
+        "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/foodtypes/3.png",
+        "subcategories": [
+          {
+            "id": 201,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/33.png",
+            "name": "DESSERTS",
+            "items": [
+              {
+                "id": 2001,
+                "name": "BROWNIE WITH ICE CREAM",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/101.png",
+                "price": 349.0
+              },
+              {
+                "id": 2002,
+                "name": "NUTELLA SANDWICH",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/430.png",
+                "price": 349.0
+              },
+              {
+                "id": 2003,
+                "name": "PEANUT BUTTER JELLY",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/429.png",
+                "price": 349.0
+              },
+              {
+                "id": 2004,
+                "name": "THAI SWEET CASHEW",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/431.png",
+                "price": 349.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Beverages",
+        "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/foodtypes/4.png",
+        "subcategories": [
+          {
+            "id": 301,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/14.png",
+            "name": "SOFT BEVERAGES",
+            "items": [
+              {
+                "id": 3001,
+                "name": "SODA",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/256.png",
+                "price": 100.0
+              },
+              {
+                "id": 3002,
+                "name": "SPARKLING WATER",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/1.png",
+                "price": 200.0
+              },
+              {
+                "id": 3003,
+                "name": "PACKAGED DRINKING WATER",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/257.png",
+                "price": 100.0
+              },
+              {
+                "id": 3004,
+                "name": "GINGER ALE",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/252.png",
+                "price": 150.0
+              },
+              {
+                "id": 3005,
+                "name": "CANNED JUICE",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/255.png",
+                "price": 150.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Drinks",
+        "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/foodtypes/2.png",
+        "subcategories": [
+          {
+            "id": 401,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/27.png",
+            "name": "FLY SIGNATURE COCKTAILS",
+            "items": [
+              {
+                "id": 4001,
+                "name": "RED SNAPPER SPRITZ",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/146.png",
+                "price": 649.0
+              },
+              {
+                "id": 4002,
+                "name": "MINTY CUCUMBER MARTINI",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/143.png",
+                "price": 649.0
+              },
+              {
+                "id": 4003,
+                "name": "FRISKY WHISKEY",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/136.png",
+                "price": 649.0
+              },
+              {
+                "id": 4004,
+                "name": "GAUVA GAGA",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/136.png",
+                "price": 649.0
+              },
+              {
+                "id": 4005,
+                "name": "MR. BLACK & WHTE",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/130.png",
+                "price": 649.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Cigars",
+        "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/foodtypes/5.png",
+        "subcategories": [
+          {
+            "id": 501,
+            "image":"https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/categories/34.png",
+            "name": "CIGARS",
+            "items": [
+              {
+                "id": 5001,
+                "name": "Rp Vintage 1990 Toro",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/203.png",
+                "price": 3500.0
+              },
+              {
+                "id": 5002,
+                "name": "Rp Vintage 2006 Robusto",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/204.png",
+                "price": 3900.0
+              },
+              {
+                "id": 5003,
+                "name": "Debonaire Sagita Daybreak",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/205.png",
+                "price": 3900.0
+              },
+              {
+                "id": 5004,
+                "name": "Vedado Classis Corona",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/206.png",
+                "price": 1500.0
+              },
+              {
+                "id": 5005,
+                "name": "Vedado Classic Robusto",
+                "image": "https://flyfeelthehigh.com/online_ordering/uploads/thumbnails/207.png",
+                "price": 1600.0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
