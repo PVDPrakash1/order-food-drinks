@@ -1,14 +1,14 @@
 import { useState, useEffect} from 'react';
 import { ScrollMenu} from 'react-horizontal-scrolling-menu';
 import data from './Data.json';
-import './MenuItem.css'
+import './FoodTypes.css'
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
 import Category from './Category';
 import SubCategory from './SubCategory';
 import { Accordion } from 'react-bootstrap';
 
-const MenuItem = ()=>{
+const FoodTypes = ()=>{
     const [selectedCategory,setSelectedCategory] = useState(null);
 
     useEffect(() => {
@@ -46,4 +46,4 @@ return(
          </div>
     )
 }
-export default MenuItem;
+export default FoodTypes;

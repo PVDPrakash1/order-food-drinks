@@ -33,6 +33,7 @@ const SubCategory = ({ subcategory }) => {
                         <div className="item-info">
                           <h4>{item.name}</h4>
                           <p>RS.{item.price}/-</p>
+                          <p>{item.description}</p>
                           <button 
                             className="add-instruction-button"
                              onClick={handleAddInstructions}
