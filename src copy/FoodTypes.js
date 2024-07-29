@@ -8,8 +8,9 @@ import Category from './Category';
 import SubCategory from './SubCategory';
 import { Accordion } from 'react-bootstrap';
 
-const FoodTypes = ()=>{
+const FoodTypes = ({addToCart,removeFromCart})=>{
     const [selectedCategory,setSelectedCategory] = useState(null);
+   
 
     useEffect(() => {
         if (data.categories && data.categories.length > 0) {
@@ -38,11 +39,12 @@ return(
         <div className='subCategories'>
             <Accordion>
           {selectedCategory.subcategories.map((subcategory) => (
-            <SubCategory key={subcategory.id} subcategory={subcategory} />
+            <SubCategory key={subcategory.id} subcategory={subcategory} addToCart={addToCart} removeFromCart={removeFromCart}/>
         ))}
           </Accordion>
         </div>
       )}
+      
          </div>
     )
 }

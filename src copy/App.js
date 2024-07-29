@@ -1,12 +1,23 @@
-import react from 'react';
+import React ,{useState} from 'react';
 import './App.css';
-import MenuItem from './MenuItem';
+import FoodTypes from './FoodTypes';
+import Cart from './Cart';
 
 function App() {
+  const [cartItemCount,setCartItemCount] = useState(0);
+
+  const addToCart = ()=>{
+    setCartItemCount(cartItemCount+1);
+  }
+  const removeFromCart = () => {
+    setCartItemCount(cartItemCount > 0 ? cartItemCount - 1 : 0);
+  };
   return (
-    <div>
-     <MenuItem/>
+   <div className='App'>
+     <FoodTypes addToCart={addToCart} removeFromCart={removeFromCart}/>
+     <Cart itemsCount = {cartItemCount}/>
     </div>
+    
   );
 }
 

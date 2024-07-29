@@ -2,10 +2,11 @@ import React ,{useState} from 'react';
 import { Accordion } from 'react-bootstrap';
 import './SubCategory.css'; 
 
-const SubCategory = ({ subcategory }) => {
+const SubCategory = ({ subcategory ,addToCart,removeFromCart}) => {
     const [showItem,setShowItem] = useState(false);
     const [showInstructions, setShowInstructions] = useState(false);
     const [instructions, setInstructions] = useState('');
+    const [count,setCount] = useState({});
 
         const toggleChange =()=>{
             setShowItem(!showItem)
@@ -13,7 +14,27 @@ const SubCategory = ({ subcategory }) => {
         const handleAddInstructions = ()=>{
             setShowInstructions(!showInstructions);
         }
-
+        const handleAddClick = (itemId)=>{
+          setCount({
+            ...count,[itemId]:(count[itemId]||0)+1
+          })
+          addToCart()
+        }
+        const handleIncrement = (itemId) => {
+          setCount({
+            ...count,
+            [itemId]: count[itemId] + 1,
+          });
+          addToCart()
+        };
+      
+        const handleDecrement = (itemId) => {
+          setCount({
+            ...count,
+            [itemId]: count[itemId] - 1,
+          });
+          removeFromCart()
+        };
         return (
             <Accordion.Item eventKey={subcategory.id} key={subcategory.id}>
               <Accordion.Header className="custom-accordion-header" onClick={toggleChange}>
@@ -38,8 +59,8 @@ const SubCategory = ({ subcategory }) => {
                             className="add-instruction-button"
                              onClick={handleAddInstructions}
                           >
-                            <p className='button-paragraph'> + ADD </p>
-                              <p>INSTRUCTIONS</p>
+                            <p className='button-paragraph' style={{marginTop:'10px'}}> + Add </p>
+                              <p>Instructions</p>
                          </button>
                          {showInstructions && (
                             <div className='instructions-container'>
@@ -49,18 +70,27 @@ const SubCategory = ({ subcategory }) => {
                             />
                             </div>
                     )}
-                         
-                        </div>
+                      </div>
                         <div className="item-image">
                           <img
                             src={item.image}
                             alt={item.name}
                             style={{ width: '100px', height: '100px' }}
                           />
-                          <button
-                         className='add-button'>
-                            ADD
-                         </button>
+                          {count[item.id] ? (
+                              <div className="item-count-controls">
+                              <button onClick={() => handleDecrement(item.id)}>-</button>
+                              <span>{count[item.id]}</span>
+                              <button onClick={() => handleIncrement(item.id)}>+</button>
+                            </div>
+                          ):(
+                            <button
+                            className='add-button'
+                            onClick={() => handleAddClick(item.id)}
+                            >
+                               ADD
+                            </button>
+                          )}
                         </div>
                       </div>
                     ))}
