@@ -4,18 +4,39 @@ import FoodTypes from './FoodTypes';
 import Cart from './Cart';
 
 function App() {
-  const [cartItemCount,setCartItemCount] = useState(0);
+  const [cartItems,setCartItems] = useState([]);
+  const [isCartVisible, setIsCartVisible] = useState(false);
 
-  const addToCart = ()=>{
-    setCartItemCount(cartItemCount+1);
+  const addToCart = (item)=>{
+     setCartItems((prevItems) => {
+      const existingItem = prevItems.find((i) => i.id === item.id);
+      if (existingItem) {
+        return prevItems.map((i) =>
+          i.id === item.id ? { ...i, count: i.count + 1 } : i
+        );
+      } else {
+        return [...prevItems, { ...item, count: 1 }];
+      }
+    });
+    setIsCartVisible(true);
   }
-  const removeFromCart = () => {
-    setCartItemCount(cartItemCount > 0 ? cartItemCount - 1 : 0);
+  const removeFromCart = (item) => {
+   setCartItems((prevItems) => {
+      const existingItem = prevItems.find((i) => i.id === item.id);
+      if (existingItem && existingItem.count > 1) {
+        return prevItems.map((i) =>
+          i.id === item.id ? { ...i, count: i.count - 1 } : i
+        );
+      } else {
+        return prevItems.filter((i) => i.id !== item.id);
+      }
+    });
+    setIsCartVisible(true);
   };
   return (
    <div className='App'>
      <FoodTypes addToCart={addToCart} removeFromCart={removeFromCart}/>
-     <Cart itemsCount = {cartItemCount}/>
+     {isCartVisible && <Cart items = {cartItems}/>}
     </div>
     
   );

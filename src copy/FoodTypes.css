@@ -138,7 +138,7 @@ body {
     margin-right: 10px;
 }
 
-.custom-accordion-body {
+ .custom-accordion-body {
    padding: 10px;
     max-height: 0; 
     overflow: visible;
@@ -153,21 +153,22 @@ body {
     height:100%;
     width:100%;
     margin-bottom: 50px;
+    background: #352e41;
+    color: #fff;
 }
 
 
 .item-card {
     display: flex;
     align-items: center;
-   box-shadow: 0 .1rem 0.5rem white !important;
-    padding: 10px;
-    border-radius: 8px;
-    /* width: calc(50% - 20px);  */
-    width:45%;
-    box-sizing: border-box;
+     padding: 10px;
+    width:100%;
+    border-bottom: 1px double #7f6d64;
     
 }
-
+.items .item-card:last-child {
+    border-bottom: none; 
+}
 
 .item-card img {
     width: 100px;
@@ -187,20 +188,31 @@ body {
 }
 
 .item-image {
-    width: 120px;
+    position:relative;
+    width: 140px;
     height: 100px;
-    margin-bottom: 50px; 
+    object-fit: fill;
+    margin-bottom: 50px;
+    border-radius: 10px; 
 }
 
 .item-info h4 {
     margin: 0;
     color: #e0e0e0;
+    font-size: .9rem;
+    line-height: 1.2rem;
+    padding: 10px 0 7px;
 }
 
 .item-info p {
-    color: #585858;
-   margin-bottom: 10px; 
+   color: #5bc45b;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 10px 0;
       
+}
+.description{
+    color: #585858;
 }
 .item-info .button-paragraph{
     color:white;
@@ -213,7 +225,7 @@ body {
     display: inline-block;
     font-weight: 400; 
     margin-top: 10px;
-    width:80%;
+    width:30%;
     color: #212529;
     text-align: center;
     text-decoration: none;
@@ -244,7 +256,7 @@ body {
   .instructions-container {
     margin-top: 10px;
     flex-shrink: 0;
-    width: 100%;
+    width: 38%;
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x)* .5);
     padding-left: calc(var(--bs-gutter-x)* .5);
@@ -265,43 +277,54 @@ body {
     margin-left:3px
    
   }
-  .add-button{
-    margin-top: 10px;
-    margin-right:50px;
-    width:80%;
-    height:40px;
-    background-color:  #b49c7c;
-    color:white;
-    margin:auto;
+  .add-button, .item-count-controls{
+    position: absolute;
+    bottom: -15px; 
+    left: 7px;
+     width:65%;
+    height:35px;
+    align-items: center;
+    background-color: #fd0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 0 1.1rem;
+    min-width: 60px;
+    padding: .2rem 0;
+    color: #000;
+    font-size: .9rem;
+    font-weight: 700;
+    margin: .1rem 1.2rem;
+    text-align: center;
+    border:none !important
 
   }
- .add-button:hover{
-    background-color: blue;
- }
+
  .item-info button p{
     color:white;
  }
  .item-count-controls {
     display: flex;
     align-items: center;
-    gap: 10px; 
-    background-color: #b49c7c ;
+    gap:10px; 
+   
 }
 
 .item-count-controls button {
-    width: 30px; 
-    height: 30px; 
-    background-color: #b49c7c;
+    width:10px; 
+    height: 30px;
+    bottom: -15px; 
+    right: 20px; 
+    background-color: transparent;
     color:black;
     border: none;
     font-size: 16px;
 }
 
 .item-count-controls span {
-    color: white;
     font-size: 16px;
-    margin: 0 10px; 
-}
+    
+} 
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -341,4 +364,6 @@ body {
         width: 100%;
         margin-top: 10px;
     }
-}
+} 
+
+
