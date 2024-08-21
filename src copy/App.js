@@ -2,10 +2,15 @@ import React ,{useState} from 'react';
 import './App.css';
 import FoodTypes from './FoodTypes';
 import Cart from './Cart';
+import CartDetails from './CartDetails';
+import { BrowserRouter,Routes,Route,useLocation,useNavigate } from 'react-router-dom';
+
+
 
 function App() {
   const [cartItems,setCartItems] = useState([]);
-  const [isCartVisible, setIsCartVisible] = useState(false);
+  //const [isCartVisible, setIsCartVisible] = useState(false);
+
 
   const addToCart = (item)=>{
      setCartItems((prevItems) => {
@@ -18,7 +23,8 @@ function App() {
         return [...prevItems, { ...item, count: 1 }];
       }
     });
-    setIsCartVisible(true);
+    //setIsCartVisible(true);
+   
   }
   const removeFromCart = (item) => {
    setCartItems((prevItems) => {
@@ -31,15 +37,40 @@ function App() {
         return prevItems.filter((i) => i.id !== item.id);
       }
     });
-    setIsCartVisible(true);
+    //setIsCartVisible(true);
+    
   };
+  console.log("Cart Items:", cartItems);
+
   return (
    <div className='App'>
-     <FoodTypes addToCart={addToCart} removeFromCart={removeFromCart}/>
-     {isCartVisible && <Cart items = {cartItems}/>}
+    <BrowserRouter>
+    <Routes>
+    <Route exact path='/'
+    element={ <FoodTypes addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
+      <Route path="/cart"
+      element={<CartDetails items = {cartItems} addToCart={addToCart} removeFromCart={removeFromCart}/>} />
+      </Routes>
+      {/* {isCartVisible && <Cart items = {cartItems} />} */}
+      <CartWithCondition cartItems={cartItems}/>
+    </BrowserRouter>
+    
+     
+     
     </div>
     
   );
 }
+const CartWithCondition = ({cartItems}) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const handleViewCartClick = () => {
+    navigate('/cart');
+  };
+
+  return location.pathname === '/' && cartItems.length > 0 ? (
+    <Cart items={cartItems} onViewCart={handleViewCartClick} />
+  ) : null;
+};
 
 export default App;
